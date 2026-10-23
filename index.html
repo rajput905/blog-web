@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Notebook: short, practical articles on building websites.">
+  <title>The Notebook | Articles on Building for the Web</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="brand">The Notebook</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#articles">Articles</a>
+        <a href="#footer">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HOME (FULL SCREEN) ============ -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="kicker">Notes on building for the web</p>
+        <h1>Small websites, <em>built with care.</em></h1>
+        <p class="lede">
+          Practical articles on layout, color, motion, accessibility and performance.
+          Written from real projects, for people who build things on their own.
+        </p>
+        <a href="#articles" class="btn-hero">Read the articles</a>
+      </div>
+      <a href="#articles" class="scroll-cue">Scroll</a>
+    </section>
+
+    <!-- ============ ARTICLES ============ -->
+    <section class="articles" id="articles">
+      <div class="container">
+
+        <div class="section-head reveal">
+          <p class="section-label">Latest articles</p>
+          <h2>Ten things I keep coming back to.</h2>
+          <p class="muted">Read the summary, then open a post to see the full thinking behind it.</p>
+        </div>
+
+        <div class="article-list">
+
+          <!-- Article 1 -->
+          <article class="article reveal">
+            <figure class="article-media">
+              <img src="https://picsum.photos/seed/article-1/800/600" alt="Warm paper texture with an open notebook" loading="lazy">
+            </figure>
+            <div class="article-body">
+              <p class="article-meta">Design · 14 Sep 2026</p>
+              <h3>Why calm colors make text easier to read</h3>
+              <p class="article-summary">Warm backgrounds and softer ink reduce glare and make long articles more comfortable to read.</p>
+              <button class="show-more" type="button" aria-expanded="false" aria-controls="more-1">Show more</button>
+              <div class="article-more" id="more-1">
+                <div class="more-inner">
+                  <p>Pure black text on a pure white page is the default in many browsers, and it works well for short labels and quick scanning. Over a long article, though, that contrast can feel harsh. The brightness of a white screen makes the eyes work harder, especially in a dim room or late at night. Softer colors solve much of that problem without sacrificing legibility. A warm off-white background paired with a dark brown-grey ink keeps contrast high enough for comfortable reading while lowering the overall glare.</p>
+                  <p>Contrast still matters, so the goal is balance rather than softness at any cost. WCAG recommends a contrast ratio of at least 4.5 to 1 for normal body text, and any palette can be checked with a free online tool before publishing. When I choose colors for a reading page, I start with the text color and test it against the background, then adjust the accent colors so links and buttons stand out without shouting. Line length and line height matter just as much. A column of around 60 to 75 characters with a line height near 1.7 gives the eye a steady rhythm from one line to the next.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="article reveal">
+            <figure class="article-media">
+              <img src="https://picsum.photos/seed/article-2/800/600" alt="Abstract soft light moving across a wall" loading="lazy">
+            </figure>
+            <div class="article-body">
+              <p class="article-meta">Animation · 29 Aug 2026</p>
+              <h3>Animate only what helps people understand</h3>
+              <p class="article-summary">Motion can guide attention, but too much of it turns a page into noise. Use it for feedback and key moments.</p>
+              <button class="show-more" type="button" aria-expanded="false" aria-controls="more-2">Show more</button>
+              <div class="article-more" id="more-2">
+                <div class="more-inner">
+                  <p>Animation is most useful when it answers a question for the visitor. A button that lifts slightly on hover tells the person that it is clickable. A panel that slides open shows where new content came from. A short fade when a section enters the screen can help the eye notice that something has changed. In each case the motion carries information, and removing it would make the interface harder to understand.</p>
+                  <p>Animation becomes a problem when it competes with the content. Elements that bounce forever, text that flies in from every direction, or effects that repeat on every scroll can tire people quickly. My rule is simple: animate once, keep it short, and use transform and opacity so the browser can handle the work smoothly. Always respect the reduced-motion setting too. Some visitors feel dizziness or discomfort from movement, and a good page turns off nonessential effects for them while still showing the content clearly.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="article reveal">
+            <figure class="article-media">
+              <img src="https://picsum.photos/seed/article-3/800/600" alt="Laptop on a wooden desk with code on the screen" loading="lazy">
+            </figure>
+            <div class="article-body">
+              <p class="article-meta">Process · 2 Aug 2026</p>
+              <h3>Building a page with plain HTML and CSS</h3>
+              <p class="article-summary">A single HTML file, one stylesheet and a few lines of JavaScript are enough for many small websites.</p>
+              <button class="show-more" type="button" aria-expanded="false" aria-controls="more-3">Show more</button>
+              <div class="article-more" id="more-3">
+                <div class="more-inner">
+                  <p>Frameworks are useful, but they are not required for every project. A portfolio, a local business page or a small event site can be built with one HTML file, one stylesheet and a short script. Plain files are easy to open, easy to edit and easy to hand over to someone who is not a developer. There is no build step to set up, and the page works on any hosting service that can serve static files.</p>
+                  <p>The trick is to keep the structure simple and consistent. Use semantic elements like header, main, section and footer so the page makes sense to screen readers and search engines. Define colors and fonts as CSS custom properties at the top of the stylesheet, so a single change updates the whole site. Group styles by section, use class names that describe purpose rather than appearance, and keep JavaScript limited to what the page truly needs. A well-organized plain project can stay maintainable for years.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="article reveal">
+            <figure class="article-media">
+              <img src="https://picsum.photos/seed/article-4/800/600" alt="Phone showing a map with weak signal icon" loading="lazy">
+            </figure>
+            <div class="article-body">
+              <p class="article-meta">Performance · 18 Jul 2026</p>
+              <h3>Designing for slow mobile networks</h3>
+              <p class="article-summary">Many visitors use slow or unstable connections, so smaller images and fewer requests make a real difference.</p>
+              <button class="show-more" type="button" aria-expanded="false" aria-controls="more-4">Show more</button>
+              <div class="article-more" id="more-4">
+                <div class="more-inner">
+                  <p>Not everyone browses on a fast connection. Many people use mobile data in areas with weak signal, and a page that takes ten seconds to show its first content can lose a visitor before the design even appears. Measuring the size of the page is the first step. Images are usually the heaviest part, so it helps to resize them to the size they will be displayed, compress them, and use modern formats where the browser supports them.</p>
+                  <p>Loading strategy matters too. Adding loading="lazy" to images below the fold means the browser downloads them only as the person scrolls toward them. Keeping the number of external scripts and fonts low reduces the requests needed before the page becomes usable. Some fonts can be replaced with system fonts entirely, which removes a download without hurting readability. Test on a throttled connection in your browser's developer tools to see how the page behaves when the network is slow, not just when it is fast.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="article reveal">
+            <figure class="article-media">
+              <img src="https://picsum.photos/seed/article-5/800/600" alt="Hand filling in a paper form with a pen" loading="lazy">
+            </figure>
+            <div class="article-body">
+              <p class="article-meta">Accessibility · 5 Jul 2026</p>
+              <h3>Writing accessible forms</h3>
+              <p class="article-summary">Clear labels, helpful error messages and visible focus states make forms usable for everyone.</p>
+              <button class="show-more" type="button" aria-expanded="false" aria-controls="more-5">Show more</button>
+              <div class="article-more" id="more-5">
+                <div class="more-inner">
+                  <p>Forms are where visitors take action, so they deserve careful attention. Every input needs a visible label connected to it, using a for attribute that matches the input's id. Placeholder text is not a replacement for a label, because it disappears as soon as someone starts typing. Using the right input type, such as email or tel, also helps phones show the correct keyboard and lets browsers check the basic format before submission.</p>
+                  <p>Error messages should explain what went wrong and how to fix it. Saying "Please enter a valid email address" is far more helpful than a red border with no text. Place the message next to the field it describes, and move focus to the first invalid field after submission so keyboard users know where to go. Avoid relying on color alone to show an error, and pair it with an icon or text. Finally, keep the form as short as possible, because every extra field is one more reason for someone to leave without finishing.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="article reveal">
+            <figure class="article-media">
+              <img src="https://picsum.photos/seed/article-6/800/600" alt="Close up of printed letters on a page" loading="lazy">
+            </figure>
+            <div class="article-body">
+              <p class="article-meta">Typography · 21 Jun 2026</p>
+              <h3>Choosing a typeface without overthinking it</h3>
+              <p class="article-summary">Two well-chosen fonts, one for headings and one for body text, cover most projects.</p>
+              <button class="show-more" type="button" aria-expanded="false" aria-controls="more-6">Show more</button>
+              <div class="article-more" id="more-6">
+                <div class="more-inner">
+                  <p>Typography can feel like a huge decision, but most projects need only two fonts. A serif or expressive display face works well for headings because it adds character and draws the eye. A clean sans-serif is usually the better choice for body text, because it stays readable at small sizes on screens. Google Fonts offers a large selection, and loading only the weights you actually use keeps the download small.</p>
+                  <p>Pay more attention to size and spacing than to finding the perfect font. A body size of around 16 to 18 pixels, a line height near 1.6 to 1.7, and comfortable paragraph spacing will improve readability far more than switching between dozens of typefaces. Use a clear size scale for headings so the hierarchy is obvious. Always provide fallback fonts in your CSS, such as Georgia or system-ui, so the page still looks reasonable if the web font fails to load. Consistency across the site matters more than novelty.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 7 -->
+          <article class="article reveal">
+            <figure class="article-media">
+              <img src="https://picsum.photos/seed/article-7/800/600" alt="Grid of square tiles arranged neatly" loading="lazy">
+            </figure>
+            <div class="article-body">
+              <p class="article-meta">CSS · 9 Jun 2026</p>
+              <h3>CSS Grid or Flexbox? Use both.</h3>
+              <p class="article-summary">Flexbox handles rows and alignment, while Grid is better for two-dimensional layouts.</p>
+              <button class="show-more" type="button" aria-expanded="false" aria-controls="more-7">Show more</button>
+              <div class="article-more" id="more-7">
+                <div class="more-inner">
+                  <p>Flexbox and Grid are both built into modern browsers, and they solve different problems. Flexbox arranges items in a single direction, either a row or a column. It is ideal for navigation bars, button groups and centering content inside a card. Grid works in two dimensions, controlling rows and columns together. It suits galleries, dashboards and page layouts where items need to line up in both directions.</p>
+                  <p>In real projects the two often work together. A page might use Grid for the overall layout and Flexbox inside each card to align the title, text and buttons. Responsive design becomes easier with features like auto-fit and minmax, which let columns adjust to the available space without many media queries. Start with the simplest layout that works, test it at several widths, and add complexity only when the design needs it.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 8 -->
+          <article class="article reveal">
+            <figure class="article-media">
+              <img src="https://picsum.photos/seed/article-8/800/600" alt="Keyboard keys in soft focus" loading="lazy">
+            </figure>
+            <div class="article-body">
+              <p class="article-meta">Accessibility · 27 May 2026</p>
+              <h3>Keyboard navigation, the basics</h3>
+              <p class="article-summary">Many people navigate with a keyboard, so every link, button and menu should be reachable and clearly focused.</p>
+              <button class="show-more" type="button" aria-expanded="false" aria-controls="more-8">Show more</button>
+              <div class="article-more" id="more-8">
+                <div class="more-inner">
+                  <p>A surprising number of websites cannot be used with a keyboard alone. Pressing Tab should move through links, buttons and form fields in a logical order, and the focused element should be clearly visible. Using native elements such as a, button and input gives you keyboard support for free. Building a clickable div is much harder to get right, because it needs its own focus behavior, key handlers and role information.</p>
+                  <p>Focus styles are often removed by designers who find them unattractive, which makes the page unusable for keyboard users. Instead, style focus in a way that matches the design, such as a thick outline with an offset. Modal dialogs need extra care: focus should move into the dialog when it opens, stay inside while it is open, and return to the trigger when it closes. Testing is simple. Put the mouse aside for a few minutes and try to complete the main tasks of your site using only the keyboard.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 9 -->
+          <article class="article reveal">
+            <figure class="article-media">
+              <img src="https://picsum.photos/seed/article-9/800/600" alt="Code editor window with colorful syntax" loading="lazy">
+            </figure>
+            <div class="article-body">
+              <p class="article-meta">JavaScript · 13 May 2026</p>
+              <h3>Small JavaScript interactions that feel natural</h3>
+              <p class="article-summary">A few well-placed scripts can improve a page without turning it into an application.</p>
+              <button class="show-more" type="button" aria-expanded="false" aria-controls="more-9">Show more</button>
+              <div class="article-more" id="more-9">
+                <div class="more-inner">
+                  <p>JavaScript is most helpful when it does small, focused jobs. Toggling a menu, revealing content when it scrolls into view, or validating a form before submission are all good examples. These interactions make the page respond to the visitor, but they do not need a large framework. Attaching event listeners directly to the elements involved keeps the code short and easy to follow.</p>
+                  <p>Good interactions also degrade gracefully. If the script fails to load, the content should still be readable and the links should still work. Use IntersectionObserver instead of listening to every scroll event, since it is more efficient and easier to reason about. Keep animations driven by CSS where possible, and let JavaScript add or remove classes. Finally, respect the reduced-motion preference by checking it in your script and skipping effects when it is set.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 10 -->
+          <article class="article reveal">
+            <figure class="article-media">
+              <img src="https://picsum.photos/seed/article-10/800/600" alt="Stopwatch resting on a stack of books" loading="lazy">
+            </figure>
+            <div class="article-body">
+              <p class="article-meta">Performance · 22 Apr 2026</p>
+              <h3>Keeping a website fast over time</h3>
+              <p class="article-summary">Performance is not a one-time task, because new images, scripts and fonts slowly add weight.</p>
+              <button class="show-more" type="button" aria-expanded="false" aria-controls="more-10">Show more</button>
+              <div class="article-more" id="more-10">
+                <div class="more-inner">
+                  <p>A website that feels fast at launch can slowly become sluggish. New images get added without being compressed, a tracking script is installed for a campaign and never removed, and a font family is loaded with more weights than anyone uses. Each change looks harmless on its own, but together they add seconds to the load time. Setting a simple budget, such as a page weight limit or a target load time, helps you notice when something has grown too large.</p>
+                  <p>Regular checks keep things under control. Running a performance audit in Lighthouse or a similar tool once a month shows which files cause the most delay. Remove unused CSS and scripts, combine small requests where it makes sense, and cache static assets so returning visitors do not download them again. Most importantly, measure before and after every change. Performance improvements are easiest to maintain when they are based on numbers rather than guesses.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container footer-inner">
+      <p>© 2026 The Notebook</p>
+      <a href="mailto:hello@example.com">hello@example.com</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
